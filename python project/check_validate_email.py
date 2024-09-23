@@ -1,0 +1,17 @@
+#for validate email conditon:
+#a-z
+#0-9
+#._  -only 1 time
+#@   -only 1 time
+#.    one dot from the last 3rd or 2nd place
+
+import re
+
+email_condition= "^[a-z]+[\._]?[a-z 0-9]+[@]\w+[.]\w{2,3}$"
+user_email=input("Enter your email:")
+
+if re.search(email_condition, user_email):
+    print("Current email")
+else:
+    print("Wrong email")    
+    
